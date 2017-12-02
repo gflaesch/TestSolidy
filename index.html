@@ -4,7 +4,7 @@
         <script> 
         function cb(e,r){console.log(e,r);}
         function myFunction(){ 
-            var contractAdress = "0x0392c8213631086e9b151fad631ca684cbd7acbe"
+            var contractAdress = "0xa816cbc5cb1b80bcdc282319bc6c327537e4ce6a"
             var contractABI = [{"constant":true,"inputs":[],"name":"val","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"readValue","outputs":[{"name":"a","type":"string"},{"name":"b","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"newVal","type":"string"}],"name":"doSomething","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]
             var contractInstance = web3.eth.contract(contractABI).at(contractAdress)
             console.log("hello world!");
