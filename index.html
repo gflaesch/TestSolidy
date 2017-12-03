@@ -3,13 +3,14 @@
         <H1> Hello Wor!d </H1>
        
         <script type="text/javascript">
+            import contractABI from "ABI.json"
             console.log("hello world!");
             function cb(e,r){console.log(e,r);}
             function myFunction(){ 
+                const athena= new web3.eth.Contract(ABI)
                 var contractAdress = "0x1c14eed99e416d7599023945d70e013d7f33dd4b";
-                var contractABI = [{"constant":true,"inputs":[],"name":"val","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"readValue","outputs":[{"name":"a","type":"string"},{"name":"b","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"newVal","type":"string"}],"name":"doSomething","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}];
-                var contractInstance = web3.eth.contract(contractABI).at(contractAdress);
                 console.log("hello world!");
+                onsole.log(athena);
                 console.log("Your account is:" + web3.eth.accounts[0]);
          }
         </script>
